@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Helper classes for title and text font
+
+.title-font { font-family: 'Gloria Hallelujah', cursive; }
+.text-font { font-family: 'Open Sans', sans-serif; }
+
+// Reset styles for the app
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: {
+    image: url('./assets/images/comic-book-bg.jpeg');
+    size: cover;
+    repeat: no-repeat;
+  }
+}
