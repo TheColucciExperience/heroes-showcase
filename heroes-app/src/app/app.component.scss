@@ -1,0 +1,48 @@
+
+.app-container {
+  width: 90vw;
+  padding: {
+    top: 4rem;
+    bottom: 4rem;
+  }
+  margin: {
+    right: auto;
+    left: auto;
+  }
+}
+
+.header {
+  margin-bottom: 1rem;
+  background-color: white;
+  box-shadow: 1rem 2rem 1rem black;
+  &__title { text-align: center; }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: yellow;
+  box-shadow: 1rem 2rem 1rem black;
+  @media (min-width: 1200px) { margin-bottom: 4rem; }
+  &__link {
+    flex: 1;
+    padding: {
+      top: .5rem;
+      bottom: .5rem;
+    }
+    text: {
+      align: center;
+      decoration: none;
+    }
+    color: black;
+    cursor: pointer;
+    transition-duration: .3s;
+    &:hover { background-color: darken(yellow, 10%); }
+    &.active {
+      color: white;
+      background-color: lighten(black, 15%);
+    }
+    @media (min-width: 768px) { font-size: 1.5rem; }
+  }
+}

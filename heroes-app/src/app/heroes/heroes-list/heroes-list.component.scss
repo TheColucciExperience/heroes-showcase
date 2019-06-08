@@ -1,0 +1,96 @@
+.hero-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.hero-image-container {
+  position: relative;
+  margin-bottom: .8rem;
+  box-shadow: 1rem 2rem 1rem black;
+  @media (min-width: 992px) {
+    transition-duration: .3s;
+    &:hover { transform: scale(1.025, 1.025); }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    object-fit: cover;
+    @media (min-width: 568px) {
+      max-width: 25rem;
+      @media (min-width: 1200px) { max-width: 28.125rem }
+    }
+  }
+  &__link {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    span {
+      display: inline-block;
+      width: 90%;
+      margin-bottom: 1rem;
+      padding: .5rem;
+      font-size: 1.2rem;
+      text-align: center;
+      color: black;
+      background-color: yellow;
+      transition-duration: .3s;
+      @media (min-width: 992px) {
+        padding: .2rem;
+        font-size: 1.5rem;
+        &:hover {
+          color: white;
+          background-color: lighten(black, 15%);
+        }
+      }
+    }
+  }
+}
+
+.hero-list {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 30rem;
+  list-style-type: none;
+  background-color: white; // Fallback color
+  box-shadow: 1rem 2rem 1rem black;
+  @media (min-width: 992px) {
+    max-width: 40%;
+  }
+  &__item {
+    color: black;
+    background-color: yellow;
+    cursor: pointer;
+    @media (min-width: 992px) {
+      font-size: 1.2rem;
+      transition-duration: .3s;
+      &:hover { background-color: darken(yellow, 10%); }
+    }
+    &.active {
+      color: white;
+      background-color: lighten(black, 15%);
+    }
+    span {
+      display: inline-block;
+      width: 3rem;
+      padding: .5rem;
+      text-align: center;
+      color: white;
+      background-color: lighten(black, 15%);
+    }
+  }
+}

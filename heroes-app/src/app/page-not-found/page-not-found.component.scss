@@ -1,0 +1,18 @@
+.title {
+  max-width: 20rem;
+  margin: {
+    top: 5rem;
+    left: auto;
+    right: auto;
+  }
+  padding: .5rem 1rem;
+  text-align: center;
+  color: black;
+  background-color: white;
+  box-shadow: 1rem 2rem 1rem black;
+  @media (min-width: 768px) {
+    max-width: 30rem;
+    margin-top: 8rem;
+    font-size: 2rem;
+  }
+}

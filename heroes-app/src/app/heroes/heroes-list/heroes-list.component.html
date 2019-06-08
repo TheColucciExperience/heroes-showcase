@@ -1,0 +1,20 @@
+<div class="hero-list-container">
+
+  <div class="hero-image-container">
+    <img class="hero-image-container__img"
+         src="../../../assets/images/heroes/{{ selectedHero.img_url }}"
+         alt="{{ selectedHero.name }} image"/>
+    <a class="hero-image-container__link title-font" [routerLink]="['/hero', selectedHero.id]">
+      <span>See More</span>
+    </a>
+  </div>
+
+  <ul class="hero-list title-font">
+    <li *ngFor="let hero of heroes; let i=index" (click)="onClickHero(hero)"
+        [class.active]="selectedHero === hero" class="hero-list__item">
+      <span>{{ i + 1 }}</span> {{ hero.name }}
+    </li>
+  </ul>
+
+
+</div>

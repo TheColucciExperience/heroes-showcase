@@ -1,0 +1,20 @@
+<div *ngIf="hero$ | async as hero" class="hero-detail-container">
+
+  <div class="hero-image-container">
+    <img class="hero-image-container__img"
+         src="../../../assets/images/heroes/{{ hero.img_url }}"
+         alt="{{ hero.name }} image"/>
+    <h3 class="hero-image-container__title title-font">{{ hero.name }}</h3>
+  </div>
+
+  <section class="hero-detail-info">
+    <h2 class="hero-detail-info__title title-font">Hero Information</h2>
+    <p class="hero-detail-info__description text-font">{{ hero.description }}</p>
+  </section>
+
+
+</div>
+
+<div [hidden]="hero$ | async">
+  <h1 class="hero-not-found title-font">Hero not found!!</h1>
+</div>

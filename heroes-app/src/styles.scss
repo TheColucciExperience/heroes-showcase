@@ -15,10 +15,11 @@
 
 body {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background: {
-    image: url('./assets/images/comic-book-bg.jpeg');
+    image: url('./assets/images/backgrounds/comic-book-bg.jpeg');
     size: cover;
     repeat: no-repeat;
+    position: center;
   }
 }
